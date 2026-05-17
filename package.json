@@ -1,0 +1,46 @@
+{
+  "name": "npm-lifecycle-demo",
+  "version": "1.0.1",
+  "description": "A demo app to learn npm lifecycle commands",
+  "main": "src/index.js",
+  "scripts": {
+    "preinstall": "echo '🔧 [preinstall]  → Runs BEFORE npm install'",
+    "install": "echo '📦 [install]     → Dependencies are being installed'",
+    "postinstall": "echo '✅ [postinstall] → Runs AFTER npm install'",
+    "prestart": "echo '🔧 [prestart]    → Runs BEFORE npm start'",
+    "start": "node src/index.js",
+    "poststart": "echo '✅ [poststart]   → Runs AFTER npm start exits'",
+    "prebuild": "echo '🔧 [prebuild]    → Cleaning old build...' && node scripts/clean.js",
+    "build": "node scripts/build.js",
+    "postbuild": "echo '✅ [postbuild]   → Build complete! Files are in /dist'",
+    "pretest": "echo '🔧 [pretest]     → Setting up test environment...'",
+    "test": "node scripts/test.js",
+    "posttest": "echo '✅ [posttest]    → Test run finished'",
+    "prelint": "echo '🔧 [prelint]     → Preparing linter...'",
+    "lint": "node scripts/lint.js",
+    "postlint": "echo '✅ [postlint]    → Linting done'",
+    "prepublishOnly": "echo '🔧 [prepublishOnly] → Final checks before publishing to npm'",
+    "prepare": "echo '📦 [prepare]        → Runs on install AND before publish'",
+    "version": "echo '🔢 [version]     → Runs when you change version (npm version patch)'",
+    "postversion": "echo '✅ [postversion] → After version bump (good for git push)'",
+    "dev": "node scripts/dev.js",
+    "info": "node scripts/info.js"
+  },
+  "keywords": [
+    "npm",
+    "lifecycle",
+    "demo",
+    "nodejs"
+  ],
+  "author": "You",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
